@@ -1,0 +1,262 @@
+/* Transaction History Page - Modern White Theme */
+
+/* Apply a base font and background color to the entire page */
+body {
+  font-family: 'Inter', sans-serif; /* A clean, modern font */
+  background-color: #f8fafc; /* Light gray-blue background */
+  color: #1e293b; /* Dark slate text color for readability */
+  margin: 0;
+  padding: 24px;
+}
+
+/* Main container for the entire layout */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header section containing the title and top-right controls */
+.header {
+  margin-bottom: 32px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a; /* Even darker for the main title */
+  margin: 0;
+}
+
+/* Dashboard Button */
+.dashboard-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.dashboard-btn:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6b4190 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* General button styles */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0; /* Light gray border */
+  background-color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Primary button style (e.g., Export, Download) */
+.btn-primary {
+  background-color: #4f46e5; /* Indigo */
+  color: #ffffff;
+  border-color: #4f46e5;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+  border-color: #4338ca;
+}
+
+/* Main content card with a glassmorphism effect */
+.main-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.08);
+}
+
+/* Filter controls section */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap; /* Allows filters to wrap on smaller screens */
+  gap: 16px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 150px; /* Give filter groups a minimum width */
+}
+
+.filter-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b; /* Slate gray for labels */
+}
+
+/* Styling for select dropdowns and text inputs */
+.input-field,
+.select-field {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+.input-field:focus,
+.select-field:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrapper i {
+  position: absolute;
+  left: 12px;
+  color: #94a3b8;
+}
+
+.search-input {
+  padding-left: 36px;
+}
+
+/* Clear filters button */
+.clear-filters-btn {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-end; /* Aligns with the bottom of other inputs */
+}
+
+/* Transactions list table */
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 16px 8px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.transactions-table th {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Individual transaction row */
+.transaction-row {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.transaction-row:hover {
+  background-color: #f8fafc;
+}
+
+.transaction-type {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.transaction-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0e7ff; /* Light indigo background for icon */
+  color: #4f46e5; /* Indigo icon color */
+  font-weight: bold;
+}
+
+.transaction-amount {
+  font-weight: 600;
+  color: #10b981; /* Green for positive amounts */
+}
+
+/* User profile display in header */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .dashboard-btn {
+    justify-content: center;
+  }
+  
+  .header-title {
+    text-align: center;
+  }
+}
