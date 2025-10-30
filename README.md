@@ -1,4 +1,4 @@
-# Payment History App
+# SMART PAY
 
 A full-stack web application for tracking personal payment history with user authentication and profile management.
 
